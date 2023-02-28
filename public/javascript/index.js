@@ -4,8 +4,14 @@
    */
   const characterTemplate = document.getElementById('template')
 
-  document.getElementById('fetch-all').addEventListener('click', function (event) {
+  const characterApi = axios.create({
+    baseURL: 'http://localhost:5005/api/characters'
+  })
 
+  const myUrl = 'http://localhost:5005/api'
+
+  document.getElementById('fetch-all').addEventListener('click', function (event) {
+    console.log(event)
   });
 
   document.getElementById('fetch-one').addEventListener('click', function (event) {
